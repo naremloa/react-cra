@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import NButton, { NButtonProps } from './components/NButton';
+import NButton, { NButtonProps } from '@/components/NButton';
 import { DownloadOutlined } from '@ant-design/icons';
 
 const playgorundStyle = {

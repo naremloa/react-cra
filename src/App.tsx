@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import './styles/index.less';
-import Playground from '@/Playground';
+import logo from './assets/logo.svg';
+import Playground from '@/views/Playground';
 
 const appStyle = {
   height: '100%',
