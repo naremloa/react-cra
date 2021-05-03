@@ -5,6 +5,13 @@ const path  = require('path');
 // const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
+  jest: {
+    configure: {
+      moduleNameMapper: {
+        "^@/(.+)": "<rootDir>/src/$1"
+      },
+    }
+  },
   webpack: {
     plugins: [
       new Webpackbar({
