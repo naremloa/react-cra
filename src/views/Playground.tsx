@@ -1,13 +1,5 @@
-import { CSSProperties } from "react";
 import NButton, { NButtonProps } from '@/components/NButton';
 import { DownloadOutlined } from '@ant-design/icons';
-
-const playgorundStyle = {
-  height: '100%',
-  width: '100%',
-  padding: '10px',
-  backgroundColor: '#475e8d',
-};
 
 const btnList: (NButtonProps & { index: string })[] = [
   { index: 'btn-1', type: 'primary', shape: 'circle', icon: (<DownloadOutlined />) },
@@ -18,7 +10,7 @@ const btnList: (NButtonProps & { index: string })[] = [
 
 export default function Playground() {
   return (
-    <div style={ playgorundStyle as CSSProperties }>
+    <div>
       { btnList.map( item => (
         <div style={ { marginBottom: '5px' } } key={item.index}>
           <NButton { ...item } />

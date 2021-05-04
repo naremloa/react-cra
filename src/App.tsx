@@ -1,9 +1,17 @@
 import logo from './assets/logo.svg';
-import Playground from '@/views/Playground';
+// import Playground from '@/views/Playground';
+import PageRedux from '@/views/PageRedux';
 
 const appStyle = {
   height: '100%',
   width: '100%',
+}
+
+const playgroundStyle = {
+  backgroundColor: '#475e8d',
+  height: '100%',
+  width: '200%',
+  padding: '10px',
 }
 
 function App() {
@@ -13,7 +21,10 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div>learn react</div>
       </header>
-      <Playground />
+      <div style={playgroundStyle}>
+        {/* <Playground /> */}
+        <PageRedux />
+      </div>
     </div>
   );
 }
