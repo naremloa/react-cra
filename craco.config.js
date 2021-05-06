@@ -1,16 +1,16 @@
 const Webpackbar = require('webpackbar');
 const CracoLessPlugin = require('craco-less');
 const CracoAlias = require('craco-alias');
-const path  = require('path');
+const path = require('path');
 // const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
   jest: {
     configure: {
       moduleNameMapper: {
-        "^@/(.+)": "<rootDir>/src/$1"
+        '^@/(.+)': '<rootDir>/src/$1',
       },
-    }
+    },
   },
   webpack: {
     plugins: [
@@ -25,7 +25,7 @@ module.exports = {
       //   allowAsyncCycles: false,
       //   cwd: process.cwd(),
       // }),
-    ]
+    ],
   },
   plugins: [
     {
@@ -47,4 +47,4 @@ module.exports = {
       },
     },
   ],
-}
+};

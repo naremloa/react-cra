@@ -10,9 +10,8 @@ body,
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,7 +29,6 @@ body {
       animation: App-logo-spin infinite 10s linear;
     }
   }
-
   .App-header {
     /* background-color: #282c34; */
     width: 100%;
@@ -42,20 +40,24 @@ body {
     font-size: calc(10px + 2vmin);
     color: black;
   }
-
 }
 
 .rotate-mixin(@deg) {
-  transform: rotate(@deg)
-};
+  transform: rotate(@deg);
+}
 
 .keyframes(@name, @from, @to) {
   @frames: {
-    from { @from(); }
-    to { @to(); }
+    from {
+      @from();
+    }
+    to {
+      @to();
+    }
   };
-  @keyframes @name
-  { @frames(); }
-};
+  @keyframes @name {
+    @frames();
+  }
+}
 
 .keyframes(App-logo-spin, { .rotate-mixin(0deg) }, { .rotate-mixin(360deg) });

@@ -1,7 +1,7 @@
-import { SETCOUNT, actionsTypes, setCount } from './actions'
+import { SETCOUNT, ActionsTypes, setCount } from './actions';
 
-const reducer = (state = 0, action: actionsTypes): number => {
-  switch(action.type) {
+const reducer = (state = 0, action: ActionsTypes): number => {
+  switch (action.type) {
     case SETCOUNT:
       return action.payload;
     default:
@@ -10,4 +10,4 @@ const reducer = (state = 0, action: actionsTypes): number => {
 };
 
 export default reducer;
-export { setCount }
+export { setCount };
