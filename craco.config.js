@@ -5,6 +5,20 @@ const path = require('path');
 // const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
+  babel: {
+    // 處理部分新功能和 production  的優化 https://emotion.sh/docs/babel
+    plugins: ['@emotion'],
+    presets: [
+      [
+        '@babel/preset-react',
+        {
+          runtime: 'automatic',
+          // 替換成 emotion 版本的 jsx 處理 css prop  https://emotion.sh/docs/css-prop#babel-preset
+          importSource: '@emotion/react',
+        },
+      ],
+    ],
+  },
   jest: {
     configure: {
       moduleNameMapper: {
