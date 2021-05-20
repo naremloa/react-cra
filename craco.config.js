@@ -14,7 +14,7 @@ module.exports = {
         {
           runtime: 'automatic',
           // 替換成 emotion 版本的 jsx 處理 css prop  https://emotion.sh/docs/css-prop#babel-preset
-          importSource: '@emotion/react',
+          importSource: 'babel-react-demo',
         },
       ],
     ],

@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import { ThemeProvider } from '@emotion/react';
+// import { ThemeProvider } from '@emotion/react';
 import './styles/index.less';
-import theme from './theme';
+// import theme from './theme';
 import store, { history } from './store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -12,11 +12,11 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <ConnectedRouter history={history}>
-          <App />
-        </ConnectedRouter>
-      </ThemeProvider>
+      {/* <ThemeProvider theme={theme}> */}
+      <ConnectedRouter history={history}>
+        <App />
+      </ConnectedRouter>
+      {/* </ThemeProvider> */}
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
