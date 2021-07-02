@@ -3,6 +3,7 @@ import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 // import Playground from '@/views/Playground';
 import PageRedux from '@/views/PageRedux';
+import PageAntDesign from '@/views/PageAntDesign';
 import logo from './assets/logo.svg';
 
 const appStyle = css`
@@ -50,11 +51,17 @@ function App() {
         <NavLink to="/redux" activeClassName="active">
           redux
         </NavLink>
+        <NavLink to="/ant-design" activeClassName="active">
+          ant-design
+        </NavLink>
       </header>
       <div css={playgroundStyle}>
         <Switch>
           <Route path="/redux">
             <PageRedux />
+          </Route>
+          <Route path="/ant-design">
+            <PageAntDesign />
           </Route>
           <Route path="/">
             <div>Hello Wolrd</div>
